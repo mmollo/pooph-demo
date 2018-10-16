@@ -1,10 +1,10 @@
-<?php
+<?php declare(strict_types=1);
 namespace Pooph;
 
 class Router
 {
     function routes() { return []; }
-    function add($method, $route, callable $handler, array $routes = [])
+    function add($method, $route, string $handler, array $routes = [])
     {
         if(!array_key_exists($method, $routes)) {
             $routes[$method] = [];
